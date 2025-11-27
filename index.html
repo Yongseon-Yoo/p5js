@@ -3,38 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>p5.js 작품 모음 - 4분할</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>p5.js 작품 모음 - 유용선</title>
+    
+    <style>
+       
+        :root {
+            --primary-color: #34495e; 
+            --secondary-color: #ecf0f1; 
+            --accent-color: #e74c3c; 
+            --text-color: #2c3e50; 
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            text-align: center;
+        }
+
+        header h1 {
+            margin-top: 0;
+            font-size: 2.2em;
+            font-weight: 300; 
+        }
+
+        header p {
+            font-size: 1em;
+            opacity: 0.8; 
+        }
+
+        #projects {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(2, minmax(200px, 1fr));
+            
+            gap: 20px; 
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto; 
+            padding-bottom: 50px;
+        }
+
+        .project {
+            background-color: white;
+            border-radius: 8px; 
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        }
+
+        .project a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 30px;
+            display: block; 
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            transition: color 0.3s;
+            text-align: center;
+        }
+
+        .project a:hover {
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>나의 p5.js 작품</h1>
-        <p>아래 링크를 클릭하여 4분할 화면의 p5.js 프로그램들을 감상하세요.</p>
+        <h1>나의 p5.js 작품 포트폴리오</h1>
+        <p>아래 링크를 클릭하여 유용선 학생의 p5.js 프로그램을 감상하세요.</p>
     </header>
 
     <section id="projects">
     
         <div class="project">
             <a href="sample1/index.html">
-                1. 추상화를 그려보자!
+                1. 정적 추상화 작품
             </a>
         </div>
     
         <div class="project">
             <a href="sample2/index.html">
-                2. 자신의 캐리커쳐를 그려보자!
+                2. 정적 캐리커처
             </a>
         </div>
 
         <div class="project">
             <a href="sample3/index.html">
-                3. 자신의 캐리커쳐에 움직임을 부여하자!
+                3. 캐리커처 (마우스/키 입력 움직임)
             </a>
         </div>
 
         <div class="project">
             <a href="sample4/index.html">
-                4. 자신이 만든 아트 작품에 시간에 따른 움직임을 부여하자!
+                4. 추상화 (시간 기반 움직임)
             </a>
         </div>
 
